@@ -1,0 +1,19 @@
+h1 {
+    color: red;
+}
+
+form li {
+    list-style: none;
+}
+
+.name {
+    color: red;
+    background-color: yellow;
+}
+
+li{
+    margin-top: 10px;
+}
+ul li .nnn {
+    color: green;
+}
