@@ -2,12 +2,36 @@
     display: none;
 }
 
+form li label {
+    display: block;
+    width: 150px;
+    float: left;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+form ul li input select {
+    float: left;
+}
+
+span {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+
+
 form li {
     list-style: none;
 }
 
 li{
     margin-top: 10px;
+}
+
+li input {
+    border: 1px solid gray;
 }
 .focus {
     border: 1px solid blue;
