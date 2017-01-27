@@ -36,3 +36,7 @@ li input {
 .focus {
     border: 1px solid blue;
 }
+
+.error {
+    border: 1px solid red;
+}
