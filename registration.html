@@ -8,25 +8,35 @@
     <script src="form.js"></script>
 </head>
 <body>
-    <button id="btn">BUTTON</button>
     <h1>Registration form</h1>
-    <form name="registartion">
-        <ul>
-            <li><label class="nnn" for="first_name">User First Name: </label></li>
-            <li><input type="text" id="first_name" size="20" placeholder="Input your first name..."></li>
-            <li><label for="last_name">User Last Name: </label></li>
-            <li><input type="text" id="last_name" size="20" placeholder="Input your last name..."></li>
-            <li><label for="age">User Age: </label></li>
-            <li><input type="text" id="age" size="3" placeholder="Input your age..."></li>
-            <li><label for="email">User Email Address: </label></li>
-            <li><input type="text" id="email" size="20" placeholder="Input your email address..."></li>
-            <li><label for="city">User City: </label></li>
-            <li><input type="text" id="city" size="20" placeholder="Input your city..."></li>
-            <li><label for="country">User Country: </label></li>
-            <li><input type="text" id="country" size="20" placeholder="Input your country..."></li>
-            <li><label for="post_code">User Post Code: </label></li>
-            <li><input type="text" id="post_code" size="10" placeholder="Input your post code..."></li>
-        </ul>
-    </form>
+    <div id="form">
+        <form name="registartion" onsubmit="return Validation();">
+            <ul>
+                <li><label class="nnn" for="first_name">User First Name: </label></li>
+                <li><input type="text" id="first_name" size="20" placeholder="Input your first name..."></li>
+                <li><label for="last_name">User Last Name: </label></li>
+                <li><input type="text" id="last_name" size="20" placeholder="Input your last name..."></li>
+                <li><label for="age">User Age: </label></li>
+                <li><input type="text" id="age" size="3" placeholder="Input your age..."></li>
+                <li><label for="email">User Email Address: </label></li>
+                <li><input type="text" id="email" size="20" placeholder="Input your email address..."></li>
+                <li><label for="city">User City: </label></li>
+                <li><input type="text" id="city" size="20" placeholder="Input your city..."></li>
+                <li><label for="country">User Country: </label></li>
+                <li><select id="country">
+                        <option selected="" value="Default">Please select a country</option>
+                        <option value="GR">Germany</option>
+                        <option value="PL">Poland</option>
+                        <option value="US">USA</option>
+                    </select></li>
+                <li><label for="post_code">User Post Code: </label></li>
+                <li><input type="text" id="post_code" size="10" placeholder="Input your post code..."></li>
+                <li><label id="sex">Sex: </label></li>
+                <li><input type="checkbox">Male</li>
+                <li><input type="checkbox">Female</li>
+                <li><input type="submit" id="submit"></li>
+            </ul>
+        </form>
+    </div>
 </body>
 </html>

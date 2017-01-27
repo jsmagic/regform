@@ -1,19 +1,14 @@
-h1 {
-    color: red;
+#form {
+    display: none;
 }
 
 form li {
     list-style: none;
 }
 
-.name {
-    color: red;
-    background-color: yellow;
-}
-
 li{
     margin-top: 10px;
 }
-ul li .nnn {
-    color: green;
+.focus {
+    border: 1px solid blue;
 }
