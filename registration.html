@@ -13,26 +13,26 @@
         <form name="registartion" onsubmit="return Validation();">
             <ul>
                 <li><label for="first_name">User First Name: </label></li>
-                <li><input type="text" name="first_name" id="first_name" size="20" placeholder=" Input your first name..."></li>
+                <li><input type="text" name="first_name" id="first_name" size="20" autocomplete="off" maxlength="20" placeholder=" Input your first name..."><a>  **</a></li>
                 <li><label for="last_name">User Last Name: </label></li>
-                <li><input type="text" name="last_name" id="last_name" size="20" placeholder=" Input your last name..."></li>
+                <li><input type="text" name="last_name" id="last_name" size="20" autocomplete="off" maxlength="20" placeholder=" Input your last name..."><a>  *</a></li>
                 <li><label for="age">User Age: </label></li>
-                <li><input type="text" name="age" id="age" size="3"></li>
+                <li><input type="text" name="age" id="age" size="3" maxlength="3" autocomplete="off"></li>
                 <li><label for="email">User Email Address: </label></li>
-                <li><input type="text" name="email" id="email" size="20" placeholder=" Input your email address..."></li>
+                <li><input type="text" name="email" id="email" size="20" autocomplete="off" maxlength="20" placeholder=" Input your email address..."><a>  *</a></li>
                 <li><label for="city">User City: </label></li>
-                <li><input type="text" name="city" id="city" size="20" placeholder=" Input your city..."></li>
+                <li><input type="text" name="city" id="city" size="20" autocomplete="off" maxlength="15" placeholder=" Input your city..."><a>  *</a></li>
                 <li><label for="country">User Country: </label></li>
                 <li><select name="country" id="country">
                         <option selected="" value="Default">Please select a country</option>
                         <option value="GR">Germany</option>
                         <option value="PL">Poland</option>
                         <option value="US">USA</option>
-                    </select></li>
+                    </select><a>  *</a></li>
                 <li><label for="post_code">User Post Code: </label></li>
-                <li><input type="text" name="post_code" id="post_code" size="3"></li>
-                <li><label name="sex" id="sex">Sex: </label></li>
-                <li><input class="sex" type="checkbox"><span>Male</span><input class="sex" type="checkbox"><span>Female</span></li>
+                <li><input type="text" name="post_code" id="post_code" size="8" maxlength="8" autocomplete="off"></li>
+                <li><label id="sex">Sex: </label></li>
+                <li><input type="checkbox" name="male" id="box1" class="sex" onclick="SelectBox(this.id)"><span>Male</span><input class="sex" name="female" id="box2" type="checkbox" onclick="SelectBox(this.id)"><span>Female</span></li>
                 <li><input type="submit" name="submit" id="submit" value="Submit"></li>
             </ul>
         </form>
