@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $('#form').fadeIn(2000);
+    $('form').fadeIn(3000);
 
-    $('li input, select').hover(function () {
+    $('li > input[type="text"], select').hover(function () {
         $(this).toggleClass("focus")
     });
     $('form').submit(function () {
@@ -24,8 +24,6 @@ function Validation() {
     var city = document.registartion.city;
     var country = document.registartion.country;
     var post_code = document.registartion.post_code;
-    var male_checkbox = document.registartion.male;
-    var female_checkbox = document.registartion.female;
 
     if (ValFirstName(first_name)) {
         $("#first_name").css("border", "1px solid gray");
@@ -41,11 +39,9 @@ function Validation() {
                             $("#country").css("border", "1px solid gray");
                             if (ValPostCode(post_code)){
                                 $("#post_code").css("border", "1px solid gray");
-                                if (ValSex(male_checkbox, female_checkbox)) {
-                                    alert('Form Succesfully Submitted');
-                                    $("li input").css("border", "1px solid gray");
-                                    return true;
-                                }
+                                alert('Form Succesfully Submitted');
+                                $("li input").css("border", "1px solid gray");
+                                return true;
                             }
                         }
                     }
@@ -56,26 +52,41 @@ function Validation() {
 }
 
 function ValFirstName(str) {
-    var pattern = /^[a-z]+$/;
-    if (str.value.match(pattern)) {
-        return true;
+    if(str.value.length != 0) {
+        var pattern = /^[a-z]+$/;
+        if (str.value.match(pattern)) {
+            return true;
+        }
+        else {
+            $("#first_name").css("border", "1px solid red");
+            alert('Please correct your First Name field (letters only)');
+            $("#first_name").focus();
+        }
     }
     else {
         $("#first_name").css("border", "1px solid red");
-        alert('Please correct your First Name field (letters only)');
+        alert('Please fill your First Name field');
         $("#first_name").focus();
     }
+
 }
 
 function ValLastName(str) {
-    var pattern = /^[a-z]+$/;
-    if (str.value.match(pattern)) {
-        return true;
+    if(str.value.length != 0) {
+        var pattern = /^[a-z]+$/;
+        if (str.value.match(pattern)) {
+            return true;
+        }
+        else {
+            $("#last_name").css("border", "1px solid red");
+            alert('Please correct your Last Name field (letters only)');
+            $("#last_name").focus();
+        }
     }
     else {
-        $("#last_name").css("border", "1px solid red");
-        alert('Please correct your Last Name field (letters only)');
-        $("#last_name").focus();
+            $("#last_name").css("border", "1px solid red");
+            alert('Please fill your Last Name field');
+            $("#last_name").focus();
     }
 }
 
@@ -97,25 +108,39 @@ function ValAge(str) {
 }
 
 function ValEmail(str) {
-    var pattern = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+/;
-    if(str.value.match(pattern)){
-        return true;
+    if(str.value.length != 0) {
+        var pattern = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+/;
+        if (str.value.match(pattern)) {
+            return true;
+        }
+        else {
+            $("#email").css("border", "1px solid red");
+            alert('Please correct your Email Address with valid address');
+            $("#email").focus();
+        }
     }
     else {
         $("#email").css("border", "1px solid red");
-        alert('Please correct your Email Address with valid address');
+        alert('Please fill your Email field');
         $("#email").focus();
     }
 }
 
 function ValCity(str) {
-    var pattern = /^[a-z]+$/;
-    if (str.value.match(pattern)) {
-        return true;
+    if(str.value.length != 0) {
+        var pattern = /^[a-z]+$/;
+        if (str.value.match(pattern)) {
+            return true;
+        }
+        else {
+            $("#city").css("border", "1px solid red");
+            alert('Please correct your City field (letters only)');
+            $("#city").focus();
+        }
     }
     else {
         $("#city").css("border", "1px solid red");
-        alert('Please correct your City field (letters only)');
+        alert('Please fill your City field');
         $("#city").focus();
     }
 }
@@ -131,22 +156,18 @@ function ValCountry(str){
 }
 
 function ValPostCode(str){
-    var pattern = /^[0-9]+$/;
-    if(str.value.match(pattern)){
-        return true;
+    if(str.value.length != 0) {
+        var pattern = /^[0-9]+$/;
+        if (str.value.match(pattern)) {
+            return true;
+        }
+        else {
+            $("#post_code").css("border", "1px solid red");
+            alert('Please correct your Post Code (numbers only)');
+            $("#post_code").focus();
+        }
     }
     else {
-        $("#post_code").css("border", "1px solid red");
-        alert('Please correct your Post Code (numbers only)');
-        $("#post_code").focus();
-    }
-}
-
-function ValSex(male, female){
-    if(male.checked | female.checked){
         return true;
-    }
-    else {
-        alert('Please choose your gender');
     }
 }
