@@ -17,13 +17,13 @@ function SelectBox(id){
 }
 
 function Validation() {
-    var first_name = document.registartion.first_name;
-    var last_name = document.registartion.last_name;
-    var age = document.registartion.age;
-    var email = document.registartion.email;
-    var city = document.registartion.city;
-    var country = document.registartion.country;
-    var post_code = document.registartion.post_code;
+    var first_name = document.registration.first_name;
+    var last_name = document.registration.last_name;
+    var age = document.registration.age;
+    var email = document.registration.email;
+    var city = document.registration.city;
+    var country = document.registration.country;
+    var post_code = document.registration.post_code;
 
     if (ValFirstName(first_name)) {
         $("#first_name").css("border", "1px solid gray");
