@@ -17,13 +17,13 @@ function SelectBox(id){
 }
 
 function Validation() {
-    var first_name = document.registration.first_name;
-    var last_name = document.registration.last_name;
-    var age = document.registration.age;
-    var email = document.registration.email;
-    var city = document.registration.city;
-    var country = document.registration.country;
-    var post_code = document.registration.post_code;
+    var first_name = $("#first_name").val();
+    var last_name = $("#last_name").val();
+    var age = $("#age").val();
+    var email = $("#email").val();
+    var city = $("#city").val();
+    var country = $("#country").val();
+    var post_code = $("#post_code").val();
 
     if (ValFirstName(first_name)) {
         $("#first_name").css("border", "1px solid gray");
@@ -52,9 +52,9 @@ function Validation() {
 }
 
 function ValFirstName(str) {
-    if(str.value.length != 0) {
+    if(str.length != 0) {
         var pattern = /^[a-z]+$/;
-        if (str.value.match(pattern)) {
+        if (str.match(pattern)) {
             return true;
         }
         else {
@@ -72,9 +72,9 @@ function ValFirstName(str) {
 }
 
 function ValLastName(str) {
-    if(str.value.length != 0) {
+    if(str.length != 0) {
         var pattern = /^[a-z]+$/;
-        if (str.value.match(pattern)) {
+        if (str.match(pattern)) {
             return true;
         }
         else {
@@ -91,9 +91,9 @@ function ValLastName(str) {
 }
 
 function ValAge(str) {
-    if(str.value.length != 0) {
+    if(str.length != 0) {
         var pattern = /^[1-9]+$/;
-        if (str.value.match(pattern)) {
+        if (str.match(pattern)) {
             return true;
         }
         else {
@@ -108,9 +108,9 @@ function ValAge(str) {
 }
 
 function ValEmail(str) {
-    if(str.value.length != 0) {
-        var pattern = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+/;
-        if (str.value.match(pattern)) {
+    if(str.length != 0) {
+        var pattern = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+$/;
+        if (str.match(pattern)) {
             return true;
         }
         else {
@@ -127,9 +127,9 @@ function ValEmail(str) {
 }
 
 function ValCity(str) {
-    if(str.value.length != 0) {
+    if(str.length != 0) {
         var pattern = /^[a-z]+$/;
-        if (str.value.match(pattern)) {
+        if (str.match(pattern)) {
             return true;
         }
         else {
@@ -146,7 +146,7 @@ function ValCity(str) {
 }
 
 function ValCountry(str){
-    if(str.value != "Default"){
+    if(str != "Default"){
         return true;
     }
     else {
@@ -156,9 +156,9 @@ function ValCountry(str){
 }
 
 function ValPostCode(str){
-    if(str.value.length != 0) {
+    if(str.length != 0) {
         var pattern = /^[0-9]+$/;
-        if (str.value.match(pattern)) {
+        if (str.match(pattern)) {
             return true;
         }
         else {
